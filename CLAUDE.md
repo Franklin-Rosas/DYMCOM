@@ -13,12 +13,12 @@ Instrucciones para Claude (y cualquier asistente) que trabaje en este repositori
 - **Ubicación del negocio:** Lima, Perú.
 - **Teléfono:** PENDIENTE.
 - **Correo:** PENDIENTE.
-- **URL pública:** PENDIENTE (formato `https://<id-del-proyecto>.web.app`).
+- **URL pública:** https://dymcom-98c14.web.app
 
 ## Datos técnicos
 
 - **GitHub:** `Franklin-Rosas/DYMCOM`.
-- **Firebase:** proyecto PENDIENTE (id del proyecto), plan **Spark (gratis)**.
+- **Firebase:** proyecto `dymcom-98c14`, plan **Spark (gratis)**.
 - **Proyecto independiente:** NO tiene relación con «Metrados App». No conectarlo con él ni copiar nada de allí.
 
 ## Reglas de trabajo
@@ -68,6 +68,4 @@ DYMCOM/
 
 ## Marcador de datos pendientes
 
-- El id de Firebase aparece como `PENDIENTE-ID-FIREBASE` en `.firebaserc`, en los workflows, en `index.html`, en `robots.txt` y en `sitemap.xml`.
-  Cuando se tenga el id, se reemplaza en todos esos archivos a la vez.
 - Los textos que faltan en la página llevan la clase CSS `pendiente`, que los muestra en granate.
