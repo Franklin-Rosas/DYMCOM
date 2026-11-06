@@ -36,6 +36,7 @@ Instrucciones para Claude (y cualquier asistente) que trabaje en este repositori
 10. **No cambiar el diseño ni los textos visibles sin preguntar**, salvo lo necesario para el SEO.
 11. **Si falta información, preguntar antes de inventarla.**
 12. **Antes de construir algo nuevo, esperar el «sí» del usuario.**
+13. **Al terminar cada tarea, compartir siempre el link** para ver el resultado (vista previa del pull request o web publicada).
 
 ## Estructura
 
