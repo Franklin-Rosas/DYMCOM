@@ -10,9 +10,15 @@ jobs:
     # Solo para pull requests de este mismo repositorio (no de copias ajenas)
     if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
+    env:
+      TIENE_SECRETO: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
     steps:
       - uses: actions/checkout@v4
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Aviso si falta configurar Firebase
+        if: env.TIENE_SECRETO != 'true'
+        run: echo "Falta el secreto FIREBASE_SERVICE_ACCOUNT. No se publica todavía."
+      - if: env.TIENE_SECRETO == 'true'
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
