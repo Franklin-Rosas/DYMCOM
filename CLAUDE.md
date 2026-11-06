@@ -5,11 +5,11 @@ Instrucciones para Claude (y cualquier asistente) que trabaje en este repositori
 ## Descripción del proyecto
 
 - **Qué es:** web estática de la marca, publicada en Firebase Hosting, lista para aparecer en Google (SEO, sitemap, Search Console).
-- **Qué debe hacer exactamente:** PENDIENTE (el usuario debe describirlo con sus palabras).
+- **Qué debe hacer:** página informativa de una sola página (Servicios, Nosotros, Contacto) para que los clientes encuentren la empresa en Google.
 - **Quién lo va a usar:** PENDIENTE (solo yo / mi equipo / clientes).
 - **¿Necesita login?:** PENDIENTE (sí / no).
-- **Marca:** PENDIENTE — confirmar el nombre exacto: «DYMCON – Arquitectura & Construcción», «MD Studio», o ambos.
-  (El repositorio se llama DYMCOM con **M**; la marca en las instrucciones dice DYMCON con **N**.)
+- **Marca principal:** DYMCON – Arquitectura & Construcción (logo en el banner). El repositorio se llama DYMCOM con **M**.
+- **MD Studio:** su logo se usa para el favicon y la sección «Nosotros». Relación con DYMCON: PENDIENTE.
 - **Ubicación del negocio:** Lima, Perú.
 - **Teléfono:** PENDIENTE.
 - **Correo:** PENDIENTE.
@@ -37,7 +37,7 @@ Instrucciones para Claude (y cualquier asistente) que trabaje en este repositori
 11. **Si falta información, preguntar antes de inventarla.**
 12. **Antes de construir algo nuevo, esperar el «sí» del usuario.**
 
-## Estructura prevista (pendiente de aprobación)
+## Estructura
 
 ```
 DYMCOM/
@@ -57,7 +57,6 @@ DYMCOM/
     ├── site.webmanifest
     └── assets/
         ├── css/
-        ├── js/
         └── img/             # logos, favicons, imágenes WebP
 ```
 
@@ -66,3 +65,9 @@ DYMCOM/
 - **Hosting:** sí (gratis en plan Spark).
 - Authentication, Firestore, Storage, Functions: **no**, salvo que el usuario lo apruebe.
   (Functions requiere plan Blaze → no se usa.)
+
+## Marcador de datos pendientes
+
+- El id de Firebase aparece como `PENDIENTE-ID-FIREBASE` en `.firebaserc`, en los workflows, en `index.html`, en `robots.txt` y en `sitemap.xml`.
+  Cuando se tenga el id, se reemplaza en todos esos archivos a la vez.
+- Los textos que faltan en la página llevan la clase CSS `pendiente`, que los muestra en granate.
