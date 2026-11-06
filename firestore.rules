@@ -1,0 +1,24 @@
+rules_version = '2';
+// Reglas de seguridad de Firestore para DYMCON.
+// - "leads": cualquiera puede CREAR un mensaje con campos válidos. Nadie puede leer,
+//   editar ni borrar desde la web (los mensajes se ven en la consola de Firebase).
+// - Todo lo demás está cerrado.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /leads/{id} {
+      allow read, update, delete: if false;
+      allow create: if request.resource.data.keys().hasOnly(['nombre', 'correo', 'telefono', 'mensaje', 'idioma', 'origen', 'creado'])
+        && request.resource.data.keys().hasAll(['nombre', 'correo', 'mensaje', 'idioma', 'origen', 'creado'])
+        && request.resource.data.nombre is string && request.resource.data.nombre.size() > 0 && request.resource.data.nombre.size() <= 120
+        && request.resource.data.correo is string && request.resource.data.correo.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}$') && request.resource.data.correo.size() <= 160
+        && request.resource.data.telefono is string && request.resource.data.telefono.size() <= 30
+        && request.resource.data.mensaje is string && request.resource.data.mensaje.size() >= 10 && request.resource.data.mensaje.size() <= 2000
+        && request.resource.data.idioma in ['es', 'en']
+        && request.resource.data.origen is string && request.resource.data.origen.size() <= 40
+        && request.resource.data.creado == request.time;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
