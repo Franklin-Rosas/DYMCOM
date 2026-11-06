@@ -46,6 +46,7 @@ export function organizationJsonLd(e: Empresa, lang: Locale) {
     "@type": ["Organization", "GeneralContractor"],
     "@id": `${SITE_URL}/#organizacion`,
     name: e.nombreCompleto,
+    alternateName: ["DYMCON", "DYMCOM", "DYMCON Arquitectura y Construcción"],
     url: `${SITE_URL}/${lang}/`,
     logo: `${SITE_URL}/brand/dymcon-logo.png`,
     image: `${SITE_URL}/brand/og-image.jpg`,
@@ -63,6 +64,20 @@ export function organizationJsonLd(e: Empresa, lang: Locale) {
     ...(c.redes.length ? { sameAs: c.redes.map((r) => r.url) } : {}),
   };
   return base;
+}
+
+/** Nombre del sitio para Google (aparece sobre el resultado de búsqueda). */
+export function websiteJsonLd(lang: Locale) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#sitio`,
+    name: "DYMCON",
+    alternateName: ["DYMCOM", "DYMCON Arquitectura & Construcción"],
+    url: `${SITE_URL}/`,
+    inLanguage: lang === "es" ? "es-PE" : "en",
+    publisher: { "@id": `${SITE_URL}/#organizacion` },
+  };
 }
 
 export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
