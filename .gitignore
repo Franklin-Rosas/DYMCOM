@@ -1,0 +1,11 @@
+# Firebase
+.firebase/
+firebase-debug.log*
+# Claves: nunca se suben
+*serviceAccount*.json
+*-firebase-adminsdk-*.json
+.env*
+# Sistema
+.DS_Store
+Thumbs.db
+node_modules/
