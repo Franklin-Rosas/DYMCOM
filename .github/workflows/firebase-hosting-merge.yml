@@ -3,6 +3,7 @@ name: Publicar en Firebase (main)
 on:
   push:
     branches: [main]
+  workflow_dispatch: {}  # permite publicar a mano desde la pestaña Actions
 jobs:
   deploy:
     runs-on: ubuntu-latest
