@@ -40,25 +40,25 @@ Instrucciones para Claude (y cualquier asistente) que trabaje en este repositori
 
 ## Estructura
 
+Web v2: Next.js 15 (exportación estática a `out/`), TypeScript, Tailwind, GSAP y Lenis.
+
 ```
 DYMCOM/
-├── CLAUDE.md
-├── README.md
-├── firebase.json            # Hosting + cabeceras de caché
-├── .firebaserc              # id del proyecto Firebase (no es secreto)
-├── .gitignore
-├── .github/workflows/
-│   ├── firebase-hosting-merge.yml         # deploy al hacer push a main
-│   └── firebase-hosting-pull-request.yml  # preview en cada pull request
-└── public/                  # todo lo que se publica
-    ├── index.html
-    ├── 404.html
-    ├── robots.txt
-    ├── sitemap.xml
-    ├── site.webmanifest
-    └── assets/
-        ├── css/
-        └── img/             # logos, favicons, imágenes WebP
+├── app/[lang]/              # páginas en /es y /en (inicio, política de privacidad)
+├── app/global-not-found.tsx # página 404
+├── app/sitemap.ts, robots.ts, manifest.ts
+├── components/              # brand/, layout/, motion/ (incl. SurrealScene WebGL), sections/, ui/
+├── content/                 # empresa.json, servicios.json, proyectos/, noticias/ (datos reales)
+├── i18n/                    # textos de la interfaz ES/EN
+├── lib/                     # schemas (Zod), content, seo, leads (Firestore), site
+├── media/originales/        # imágenes originales → scripts/optimize-images.mjs (AVIF/WebP)
+├── public/                  # brand/ (logos), icons/ (favicons), archivo de verificación de Google
+├── firebase.json            # Hosting (public = out), cabeceras de seguridad y caché, 301 / → /es/
+├── firestore.rules          # solo crear en "leads", sin lectura pública
+├── lighthouserc.json        # Lighthouse CI en cada vista previa
+└── .github/workflows/
+    ├── deploy.yml           # push a main → build → publica en vivo
+    └── preview.yml          # pull request → vista previa (7 días) + Lighthouse
 ```
 
 ## Partes de Firebase que se usan
