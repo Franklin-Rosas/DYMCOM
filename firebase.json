@@ -4,7 +4,7 @@
     "ignore": ["firebase.json", "**/.*", "**/*.txt.map"],
     "cleanUrls": false,
     "trailingSlash": true,
-    "redirects": [{ "source": "/", "destination": "/es/", "type": 302 }],
+    "redirects": [{ "source": "/", "destination": "/es/", "type": 301 }],
     "headers": [
       {
         "source": "**",
