@@ -45,6 +45,10 @@ const es = {
       { t: "Postventa", d: "Atendemos las observaciones después de la entrega." },
     ],
   },
+  manifesto: {
+    eyebrow: "Manifiesto",
+    title: "Del plano a la obra.",
+  },
   tech: {
     eyebrow: "Tecnología",
     title: "Herramientas para construir con menos incertidumbre.",
@@ -138,6 +142,10 @@ const en: Dictionary = {
       { t: "Handover", d: "We hand over the finished building with its documentation." },
       { t: "After-sales", d: "We follow up on any issues after handover." },
     ],
+  },
+  manifesto: {
+    eyebrow: "Manifesto",
+    title: "From blueprint to building.",
   },
   tech: {
     eyebrow: "Technology",

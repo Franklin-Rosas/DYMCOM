@@ -208,3 +208,32 @@ html.lenis body {
     display: none !important;
   }
 }
+
+/* ---------- Escena surrealista (respaldo sin WebGL) y marquesina ---------- */
+.surreal-fallback {
+  background:
+    radial-gradient(ellipse 18% 12% at 68% 62%, rgb(232 226 208 / 0.35), transparent 70%),
+    radial-gradient(ellipse 80% 40% at 60% 66%, rgb(122 14 24 / 0.75), transparent 70%),
+    linear-gradient(to bottom, #0e0e10 0%, #1a0608 55%, #0e0e10 100%);
+}
+.surreal-fallback--b {
+  background:
+    radial-gradient(ellipse 18% 12% at 70% 58%, rgb(232 226 208 / 0.3), transparent 70%),
+    radial-gradient(ellipse 80% 40% at 60% 62%, rgb(70 0 3 / 0.9), transparent 70%),
+    linear-gradient(to bottom, #0e0e10 0%, #22070a 55%, #0e0e10 100%);
+}
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(244 242 238 / 0.55);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

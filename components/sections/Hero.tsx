@@ -1,7 +1,7 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Empresa } from "@/lib/schemas";
 import type { Locale } from "@/i18n/config";
-import HeroDrawing from "@/components/brand/HeroDrawing";
+import SurrealScene from "@/components/motion/SurrealScene";
 import BlueprintGrid from "@/components/brand/BlueprintGrid";
 import Magnetic from "@/components/motion/Magnetic";
 
@@ -25,8 +25,9 @@ export default function Hero({ t, lang, empresa }: { t: Dictionary; lang: Locale
         </video>
       ) : (
         <>
+          <SurrealScene className="absolute inset-0" />
           <BlueprintGrid className="text-hueso" />
-          <HeroDrawing className="absolute -right-24 bottom-0 h-[78%] text-hueso/35 sm:right-0 md:right-[6%] md:h-[88%] md:text-hueso/45" />
+          <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-carbon/80 via-carbon/20 to-transparent md:block" />
         </>
       )}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-carbon via-carbon/40 to-transparent" />
