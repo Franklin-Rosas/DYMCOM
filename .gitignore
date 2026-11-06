@@ -1,11 +1,21 @@
+# Dependencias y compilación
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
 # Firebase
 .firebase/
 firebase-debug.log*
 # Claves: nunca se suben
 *serviceAccount*.json
 *-firebase-adminsdk-*.json
-.env*
+.env
+.env.local
+.env*.local
 # Sistema
 .DS_Store
 Thumbs.db
-node_modules/
+# Imágenes generadas en la compilación
+public/media/
+media/manifest.json
