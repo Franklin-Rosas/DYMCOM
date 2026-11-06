@@ -1,0 +1,28 @@
+{
+  "nombre": "DYMCON",
+  "nombreCompleto": "DYMCON Arquitectura & Construcción",
+  "ciudad": "Lima",
+  "pais": "Perú",
+  "especialidad": null,
+  "propuestaDeValor": {
+    "es": "Diseñamos y construimos tu proyecto, desde la idea hasta la obra terminada.",
+    "en": "We design and build your project, from the first idea to the finished building."
+  },
+  "kpis": [],
+  "mision": null,
+  "vision": null,
+  "valores": [],
+  "sectores": [],
+  "certificaciones": [],
+  "contacto": {
+    "direccion": null,
+    "telefono": null,
+    "correo": null,
+    "whatsapp": null,
+    "redes": []
+  },
+  "brochurePdf": null,
+  "heroVideo": null,
+  "historia": [],
+  "clientes": []
+}

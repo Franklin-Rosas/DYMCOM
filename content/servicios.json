@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "arquitectura",
+    "codigo": "A",
+    "titulo": { "es": "Arquitectura", "en": "Architecture" },
+    "resumen": { "es": "Diseño arquitectónico de tu proyecto.", "en": "Architectural design for your project." },
+    "imagen": null
+  },
+  {
+    "slug": "construccion",
+    "codigo": "C",
+    "titulo": { "es": "Construcción", "en": "Construction" },
+    "resumen": { "es": "Ejecución de la obra.", "en": "Building execution on site." },
+    "imagen": null
+  }
+]
