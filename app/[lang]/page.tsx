@@ -10,6 +10,7 @@ import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
 import Marquee from "@/components/sections/Marquee";
 import Manifesto from "@/components/sections/Manifesto";
+import FreeConsult from "@/components/sections/FreeConsult";
 import Tech from "@/components/sections/Tech";
 import FinalCta from "@/components/sections/FinalCta";
 
@@ -39,6 +40,7 @@ export default async function Home({ params }: P) {
       <Kpis empresa={empresa} lang={lang} />
       <About t={t} lang={lang} empresa={empresa} />
       <Services t={t} lang={lang} servicios={servicios} />
+      <FreeConsult t={t} />
       <Manifesto t={t} />
       <Process t={t} />
       <Tech t={t} />

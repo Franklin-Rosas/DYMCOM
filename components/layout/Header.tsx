@@ -16,6 +16,7 @@ export default function Header({ t, lang }: Props) {
   const links = [
     { href: "#nosotros", label: t.nav.about },
     { href: "#servicios", label: t.nav.services },
+    { href: "#consultoria", label: t.nav.consult },
     { href: "#proceso", label: t.nav.process },
     { href: "#tecnologia", label: t.nav.tech },
     { href: "#contacto", label: t.nav.contact },
