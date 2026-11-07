@@ -11,6 +11,7 @@ const es = {
     services: "Servicios",
     process: "Cómo trabajamos",
     tech: "Tecnología",
+    consult: "Consultoría gratis",
     contact: "Contacto",
     cta: "Cotiza tu proyecto",
     menu: "Menú",
@@ -57,6 +58,18 @@ const es = {
       { t: "Lean Construction", d: "Planificación de obra enfocada en reducir esperas y desperdicios." },
       { t: "Drones", d: "Vuelos de registro para medir y documentar el avance de obra." },
       { t: "IA en control de obra", d: "Análisis de datos de obra para detectar desviaciones a tiempo." },
+    ],
+  },
+  consult: {
+    eyebrow: "Consultoría gratuita",
+    title: "Tu primera consultoría es gratis.",
+    body: "Cuéntanos tu idea, tu terreno o tu obra y te orientamos sin costo y sin compromiso.",
+    cta: "Quiero mi consultoría gratis",
+    note: "Sin costo · Sin compromiso",
+    steps: [
+      { t: "Nos cuentas tu proyecto", d: "Por el formulario: qué quieres construir y dónde." },
+      { t: "Lo revisamos contigo", d: "Conversamos sobre tu idea, el alcance y tus dudas." },
+      { t: "Te damos los siguientes pasos", d: "Sales con una ruta clara para avanzar con tu proyecto." },
     ],
   },
   cta: {
@@ -109,6 +122,7 @@ const en: Dictionary = {
     services: "Services",
     process: "How we work",
     tech: "Technology",
+    consult: "Free consultation",
     contact: "Contact",
     cta: "Get a quote",
     menu: "Menu",
@@ -155,6 +169,18 @@ const en: Dictionary = {
       { t: "Lean Construction", d: "Site planning focused on cutting waiting time and waste." },
       { t: "Drones", d: "Survey flights to measure and document progress on site." },
       { t: "AI for site control", d: "Analysis of site data to catch deviations early." },
+    ],
+  },
+  consult: {
+    eyebrow: "Free consultation",
+    title: "Your first consultation is free.",
+    body: "Tell us about your idea, your plot or your project and we will guide you at no cost and with no commitment.",
+    cta: "Book my free consultation",
+    note: "No cost · No commitment",
+    steps: [
+      { t: "Tell us about your project", d: "Through the form: what you want to build and where." },
+      { t: "We review it with you", d: "We talk through your idea, the scope and your questions." },
+      { t: "You get the next steps", d: "You leave with a clear path to move your project forward." },
     ],
   },
   cta: {
